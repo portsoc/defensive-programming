@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Exceptions</title>
+
+<p>Can you imagine how this code might fail?</p>
+
+<input id=size type=number value=5></input>
+
+<script>
+  const size = document.querySelector('#size')
+
+  function prepareArray() {
+    const arraySize = size.valueAsNumber;
+    const myArray = new Array(arraySize).fill(1);
+    console.log(myArray);
+  }
+
+  size.addEventListener('change', prepareArray)
+</script>
+
