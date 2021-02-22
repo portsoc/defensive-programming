@@ -7,7 +7,8 @@
 <input id=size type=number value=5></input>
 
 <script>
-  const size = document.querySelector('#size')
+
+  const size = document.querySelector('#size');
 
   function prepareArray() {
     const arraySize = size.valueAsNumber;
@@ -15,6 +16,6 @@
     console.log(myArray);
   }
 
-  size.addEventListener('change', prepareArray)
-</script>
+  size.addEventListener('change', prepareArray);
 
+</script>
