@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Exceptions</title>
+
+<button>Crash me</button>
+
+<script>
+
+  function bail() {
+    document.body.textContent = 'sorry, giving up';
+    window.location = 'error.html';
+  }
+
+  document.querySelector('button').addEventListener('click', bail);
+
+</script>
