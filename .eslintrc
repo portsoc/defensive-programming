@@ -1,11 +1,17 @@
 {
   "extends": "portsoc",
   "plugins": ["html"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
   "root": true,
   "rules": {
     "no-multiple-empty-lines": ["error", {
       "max": 2,
       "maxEOF": 1
-    }]
+    }],
+    "import/no-unresolved": [2, { "commonjs": true, ignore: ['fs/promises'] }],
   }
 }
