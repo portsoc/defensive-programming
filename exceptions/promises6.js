@@ -1,5 +1,4 @@
-const fulfilled = Promise.resolve('Rich');
-const rejected = Promise.reject(new Error('boom'));
+import fs from 'fs/promises';
 
 async function report(promise) {
   try {
@@ -11,8 +10,8 @@ async function report(promise) {
 }
 
 async function main() {
-  await report(fulfilled);
-  await report(rejected);
+  await report(fs.access('README.md'));
+  await report(fs.access('not-here.txt'));
 }
 
 main();

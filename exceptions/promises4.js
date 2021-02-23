@@ -1,20 +1,10 @@
-import fs from 'fs/promises';
-
-const resolved = Promise.resolve(42);
-const rejected = Promise.reject(new Error('problem!'));
-
-function report(promise) {
-  return promise.then(
-    (value) => {
-      console.log('value', value);
-    },
-    (e) => {
-      console.error('error', e);
-    },
-  );
+async function main() {
+  const promise = Promise.reject(new Error('boom'));
+  console.log('hi');
+  const value = await promise;
+  console.log(value);
 }
 
-report(resolved)
-  .then(() => report(rejected))
-  .then(() => report(fs.access('README.md')))
-  .then(() => report(fs.access('not-here.txt')));
+main();
+
+console.log('bye');

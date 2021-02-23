@@ -5,9 +5,9 @@ function log(msg) {
   console.log(msg);
 }
 
-function greeting() {
+function greeting(who) {
   log('hi');
-  log();
+  log(who);
   log('bye');
 }
 

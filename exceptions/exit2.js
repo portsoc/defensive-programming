@@ -8,3 +8,4 @@ function logAll(msg, ...rest) {
 }
 
 logAll('hi', 'how', 'are', 'you?');
+logAll('message1', 'message2');
