@@ -4,17 +4,21 @@
 
 <p>Can you imagine how this code might fail?</p>
 
-<input id=size type=number value=5></input>
+<input id=size type=number placeholder="enter number"></input>
+
+<p>Output: <output></output></p>
 
 <script>
-  const size = document.querySelector('#size')
+
+  const size = document.querySelector('#size');
+  const output = document.querySelector('output');
 
   function prepareArray() {
     const arraySize = size.valueAsNumber;
     const myArray = new Array(arraySize).fill(1);
-    console.log(myArray);
+    output.textContent = JSON.stringify(myArray);
   }
 
-  size.addEventListener('change', prepareArray)
-</script>
+  size.addEventListener('change', prepareArray);
 
+</script>

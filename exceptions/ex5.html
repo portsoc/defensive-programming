@@ -20,9 +20,8 @@
   try {
     greeting();
   } catch (e) {
-    console.error(e);
+    console.error('message:', e.message);
+    console.error('stack:', e.stack);
   }
-
-  console.log('all done');
 
 </script>

@@ -17,12 +17,14 @@
     log('bye');
   }
 
-  try {
-    greeting();
-  } catch (e) {
-    console.error(e);
+  function setup() {
+    try {
+      setTimeout(greeting, 1000);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
-  console.log('all done');
+  setup();
 
 </script>

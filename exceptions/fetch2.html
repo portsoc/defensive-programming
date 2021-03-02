@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Fetch exceptions</title>
+
+<h1>Fetch exceptions</h1>
+
+<p>Server says: <output>loading…</output>
+
+<script>
+  async function loadData() {
+    const output = document.querySelector('output');
+
+    try {
+      const response = await fetch('https://jacek.soc.port.ac.uk/tmp/ws/dyn1');
+      if (response.ok) {
+        const text = await response.text();
+        output.textContent = text;
+      } else {
+        console.error(response);
+        output.textContent = `response not ok, status ${response.status}`;
+      }
+    } catch (e) {
+      console.error(e);
+      output.textContent = 'error';
+    }
+  }
+
+  window.addEventListener('load', loadData);
+</script>

@@ -1,0 +1,27 @@
+{
+  "name": "defensive-programming",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint . --ext js,mjs,html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/portsoc/defensive-programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/portsoc/defensive-programming/issues"
+  },
+  "homepage": "https://github.com/portsoc/defensive-programming#readme",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-portsoc": "^0.8.1",
+    "eslint-plugin-html": "^6.1.1"
+  }
+}
