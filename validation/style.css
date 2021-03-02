@@ -1,0 +1,25 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  max-width: 30em;
+  margin: auto;
+}
+
+input:required + label:after {
+  content: ' *';
+  color: red;
+}
+
+input.invalid {
+  box-shadow: 0 0 1em red;
+}
+
+form:invalid input[type=submit] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+form:valid .if-invalid {
+  display: none;
+}

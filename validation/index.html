@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Input Validation</title>
+
+<header>
+  <h1>Input Validation Examples</h1>
+  <h2>A Personal Details Form</h2>
+</header>
+
+<form>
+  <input id="name" required placeholder="required" >
+  <label for="name">Name</label>
+
+  <input id="nick">
+  <label for="nick">Nickname</label>
+
+  <input id="num" type="number" min=20 max=60 >
+  <label for="num">Favourite even number 20-60</label>
+
+  <input id="email" type="email" required >
+  <label for="email">Email address</label>
+
+  <input id="date" type="date">
+  <label for="date">Date of birth</label>
+
+  <!-- todo: make it email or phone is required, not both -->
+  <!-- allow +- digits curlies spaces, at least 7 characters -->
+  <input id="phone" required type=tel value="0" pattern="[-+0-9() ]{7,}">
+  <label for="phone">Phone number</label>
+
+  <input id="postcode" required pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})">
+  <label for="postcode">Postcode</label>
+
+  <input id="address1" required>
+  <label for="address1">Address line 1</label>
+
+  <input id="address2">
+  <label for="address2">Address line 2</label>
+
+  <input id="city" required>
+  <label for="city">City</label>
+
+  <input id="country">
+  <label for="country">Country</label>
+
+  <span class="if-invalid">Please fill out all required values</span>
+  <input type="submit" value="Submit">
+</form>
+
+<script type="module" src="validation.js"></script>
