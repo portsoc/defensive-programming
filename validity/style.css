@@ -1,0 +1,24 @@
+input:invalid {
+  background: rgba(255, 128, 128, 0.25);
+  /* box-shadow: 0 0 .5em red; */
+}
+
+input:required + label:after {
+  content: "*";
+  font-size: 75%;
+  color: red;
+  vertical-align: super;
+}
+
+form:invalid input[type=submit] {
+  opacity: 0.3;
+}
+
+form {
+  margin: auto;
+  max-width: 30em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  column-gap: 1em;
+}

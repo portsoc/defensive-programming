@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Input Validation</title>
+
+<header>
+  <h1>Input Validation Examples</h1>
+  <h2>A Personal Details Form</h2>
+</header>
+
+<form>
+
+  <input id=nick placeholder="optional…">
+  <label for=nick>Nickname</label>
+
+  <input id=fn placeholder="required…" required>
+  <label for=fn>First name</label>
+
+  <input id=sn placeholder="required…" required>
+  <label for=sn>Family name</label>
+
+
+  <input id=fave type=number min=0 max=100 step=2 placeholder=42 required>
+  <label for=fave>Favourite even number (0-100)</label>
+
+
+  <input id=email type=email placeholder="you@domain.com" required>
+  <label for=email>Email</label>
+
+
+  <input id=date type=date required>
+  <label for=date>Date of Birth</label>
+
+
+  <input id=phone type=text placeholder="+44 (23) 9284 6400" pattern="[()\+1-9 ]+" required>
+  <label for=phone>Phone</label>
+
+
+  <input id=zip type=text placeholder="PO1 1AA" required pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})">
+  <label>Postcode</label>
+
+  <input type=submit>
+
+</form>
